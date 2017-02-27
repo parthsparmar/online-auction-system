@@ -12,8 +12,8 @@
 
 .main-header .logo {
 	float: left;
-	width: 20%;
-	margin: 22px;
+	width: 12%;
+	margin: 26px;
 }
 
 .main-header .main-header-searchbar {
@@ -28,6 +28,12 @@
 }
 
 .main-header .main-header-searchbar .searchbtn {
-	width: 72px;
-    height: 33px;
+	width: 80px;
+    height: 41px;
+}
+
+.main-header .cart {
+	float: left;
+	margin: 20px
+	
 }

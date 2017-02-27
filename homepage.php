@@ -9,8 +9,8 @@
 <body>
 <header class="main-header">
 	<div class="logo">
-		<img src="logo.png" width="140px" height="28px">	
-	</div>	
+		<img src="logo.jpg" width="140px" height="28px">	
+	</div>
 
 	<!-- HTML for SEARCH BAR -->
 	<div class="main-header-searchbar">
@@ -19,6 +19,11 @@
 			<input type="submit" value="search" class="searchbtn">
 		</form>
 	</div>
+
+<div class="cart">
+		<img src="cart.png" width="50px" height="50px">
+	</div>	
+
 	
 </header>
 
