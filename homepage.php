@@ -9,7 +9,8 @@
 <body>
 <header class="main-header">
 	<div class="logo">
-		<img src="logo.jpg" width="140px" height="28px">	
+			
+		<img src="logo.jpg" width="180px" height="50px">	
 	</div>
 
 	<!-- HTML for SEARCH BAR -->
@@ -21,8 +22,20 @@
 	</div>
 
 <div class="cart">
-		<img src="cart.png" width="50px" height="50px">
+		<img src="cart.png" width="100px" height="50px">
 	</div>	
+	
+	<div class="sine-in">
+		<input type= "button" class="sine-in-dropdown-btn">
+		</button>
+		<div class="sine-in-dropdown-btn-content">
+			<a href="#"> your account </a>
+			<a href="#"> your orders </a>
+			<a href="#"> Register </a>
+			<a href="#"> LOGIN </a>
+			</div>
+	</div>	
+
 
 	
 </header>
