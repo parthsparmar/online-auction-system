@@ -3,7 +3,7 @@
 .main-header {
 	width: 99%;
 	height: 80px;
-	background-color: #2874f0;
+	background-color: #E40046;
 	border: none;
 	margin: 0px;
 	padding: 0px;
@@ -47,9 +47,10 @@
 	border: none;
 	cursor: pointer;
 	width: 120px;
-	height:50px;
+	height:59px;
 	background:url(sine_in_logo.JPG);
     background-repeat: no-repeat;
+	
 }
 
 .main-header .sine-in{
@@ -66,6 +67,7 @@
     z-index: 1;
 	margin-top: 0px;
 	border-radius: 0px 0px 5px 5px;
+	font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
 .main-header .sine-in-dropdown-btn-content a{
@@ -88,4 +90,9 @@
 
 .main-header .sine-in:hover .sine-in-dropdown-btn{
 	 background-color:#2e2e2e;
+}
+
+.main-header .sine-in-dropdown-btn-content .login-btn{
+	font-weight: bold;
+	background-color: #E40046;
 }

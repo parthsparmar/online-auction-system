@@ -22,17 +22,19 @@
 	</div>
 
 <div class="cart">
-		<img src="cart.png" width="100px" height="50px">
+		<img src="cart.JPg" width="100px" height="50px">
 	</div>	
 	
 	<div class="sine-in">
 		<input type= "button" class="sine-in-dropdown-btn">
 		</button>
 		<div class="sine-in-dropdown-btn-content">
-			<a href="#"> your account </a>
-			<a href="#"> your orders </a>
+			<a href="#"> Your Account </a>
+			<a href="#"> Your Orders </a>
 			<a href="#"> Register </a>
+			<div class="login-btn">
 			<a href="#"> LOGIN </a>
+			</div>
 			</div>
 	</div>	
 
