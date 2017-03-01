@@ -22,7 +22,7 @@
 	</div>
 
 <div class="cart">
-		<img src="cart.JPg" width="100px" height="50px">
+		<img src="cart.JPG" width="100px" height="50px">
 	</div>	
 	
 	<div class="sine-in">
@@ -37,10 +37,28 @@
 			</div>
 			</div>
 	</div>	
-
-
-	
 </header>
+
+<footer class="main-footer">
+	<div class="footer-logo">
+		<img src="auctionLogo.png" width="100px" height="50px">
+	</div>
+	<div class="footer-links">
+		<ul>
+		<li> <a href="#"> About </a> </li>
+		<li> <a href="#"> Help </a> </li>
+		<li> <a href="#"> Press </a> </li>
+		<li> <a href="#"> Legal </a> </li>
+		<li> <a href="#"> Privacy </a> </li>
+		<li> <a href="#"> Terms </a> </li>
+		</ul>
+	</div>
+
+	<div class="footer-copyright">
+	</div>
+	
+	
+</footer>
 
 
 </body>

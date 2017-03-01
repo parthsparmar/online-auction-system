@@ -48,7 +48,7 @@
 	cursor: pointer;
 	width: 120px;
 	height:59px;
-	background:url(sine_in_logo.JPG);
+	background:url(sine_in_logo.jpg);
     background-repeat: no-repeat;
 	
 }
@@ -95,4 +95,51 @@
 .main-header .sine-in-dropdown-btn-content .login-btn{
 	font-weight: bold;
 	background-color: #E40046;
+}
+
+.main-footer {
+	width: 99%;
+	height: 80px;
+	background-color: #E40046;
+	border: none;
+	margin-top: 700px;
+	padding: 0px;
+	position: absolute;
+}
+
+.main-footer .footer-logo{
+	margin: 16px 15px 0px 20px;
+	width: 125px;
+}
+
+.main-footer .footer-links{
+	width: 500px;
+	border: 1px solid black;
+	margin:0px 0px 0px 200px;
+}
+.main-footer .footer-links ul{
+	list-style-type: none;
+	margin: 0px 0px 0px 10px;
+  padding: 0px 5px 0px 10px;
+  overflow: hidden;
+}
+
+.main-footer .footer-links li{
+	float: left;
+}
+
+.main-footer .footer-links li a{
+	display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 25px 5px 5px; 
+    text-decoration: none;
+}
+
+.main-footer .footer-links li a:hover:not(.active){
+	background-color: #111;
+}
+
+.main-footer .footer-links li a:active{
+	background-color: #4CAF50;
 }
