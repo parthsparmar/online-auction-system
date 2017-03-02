@@ -10,7 +10,7 @@
 <header class="main-header">
 	<div class="logo">
 			
-		<img src="logo.jpg" width="180px" height="50px">	
+		<img src="image/logo.jpg" width="180px" height="50px">	
 	</div>
 
 	<!-- HTML for SEARCH BAR -->
@@ -22,7 +22,7 @@
 	</div>
 
 <div class="cart">
-		<img src="cart.JPG" width="100px" height="50px">
+		<img src="image/cart.JPG" width="100px" height="50px">
 	</div>	
 	
 	<div class="sine-in">
@@ -41,7 +41,7 @@
 
 <footer class="main-footer">
 	<div class="footer-logo">
-		<img src="auctionLogo.png" width="100px" height="50px">
+		<img src="image/auctionLogo.png" width="100px" height="50px">
 	</div>
 	<div class="footer-links">
 		<ul>
@@ -52,12 +52,33 @@
 		<li> <a href="#"> Privacy </a> </li>
 		<li> <a href="#"> Terms </a> </li>
 		</ul>
-	</div>
+	</div>	
 
-	<div class="footer-copyright">
+	<div class="footer-social-link-icons">
+	<ul>
+		<li> 
+		<a href="https://www.facebook.com/"> <img src="image/facebook.png" width="50px" height="50px"> 
+		</a>
+		</li>
+
+		<li> 
+		<a href="https://twitter.com/"> <img src="image/twitter.png" width="50px" height="50px"> 
+		</a> 
+		</li>
+
+		<li> 
+		<a href="https://www.instagram.com/?hl=en"> <img src="image/instagram.png" width="50px" height="50px"> 
+		</a> 
+		</li>
+
+		<li> 
+		<a href="https://http://youtube.com/"> <img src="image/YouTube.png" width="50px" height="50px"> 
+		</a> 
+		</li>
+		
+	</ul>
 	</div>
-	
-	
+	</div>
 </footer>
 
 

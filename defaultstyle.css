@@ -108,14 +108,15 @@
 }
 
 .main-footer .footer-logo{
-	margin: 16px 15px 0px 20px;
+	float: left;
+	margin: 16px 15px 0px 40px;
 	width: 125px;
 }
 
-.main-footer .footer-links{
-	width: 500px;
-	border: 1px solid black;
-	margin:0px 0px 0px 200px;
+.main-footer  .footer-links{
+	width: 55%;
+	float: left;
+	margin:20px 0px 0px 40px;
 }
 .main-footer .footer-links ul{
 	list-style-type: none;
@@ -132,14 +133,34 @@
 	display: block;
     color: black;
     text-align: left;
-    padding: 14px 25px 5px 5px; 
+    padding: 14px 30px 5px 30px; 
+	 
     text-decoration: none;
 }
 
 .main-footer .footer-links li a:hover:not(.active){
-	background-color: #111;
+	font-size: 15px;
 }
 
 .main-footer .footer-links li a:active{
-	background-color: #4CAF50;
+	font-size: 17px;
+}
+
+
+.main-footer  .footer-social-link-icons{
+	float: left;
+	margin: 0px 0px;
+	padding: 0px 0px;
+
+}
+
+.main-footer  .footer-social-link-icons ul{
+	margin: 0px 00px
+	float:left;
+	list-style-type: none;
+}
+
+.main-footer  .footer-social-link-icons li{
+	float: left;
+	margin: 0px 10px;
 }
