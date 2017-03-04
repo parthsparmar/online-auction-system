@@ -1,0 +1,25 @@
+{
+  "name": "online-auction-system",
+  "version": "1.0.0",
+  "description": "Online auction C2C type of system",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parthsparmar/online-auction-system.git"
+  },
+  "author": "parth parmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parthsparmar/online-auction-system/issues"
+  },
+  "homepage": "https://github.com/parthsparmar/online-auction-system#readme",
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
