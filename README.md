@@ -6,18 +6,18 @@ I chose this topic because E-commerce is very interesting and there are lot of t
 ## Technology stack ##
 For front-end, normally html/css/js are used but I wanted to learn some new tech also as per my time availability. For back-end I used PHP. Following is detailed stack:
 
-- ** Front-end technologies: **
-    - ** Core tech: **
+- **Front-end technologies:**
+    - **Core tech:**
         - HTML5
         - CSS3
         - Javascript
-    - ** Libraries used: **
+    - **Libraries used:**
         - Bootstrap3
         - jQuery
-    - ** Building & other tools: **
+    - **Building & other tools:**
         - Bower - package manager
         - Gulp for building tool
-- ** Back-end technologies: **
+- **Back-end technologies:**
     - PHP
     - MySQL database
     - Apache server
