@@ -1,0 +1,153 @@
+/* <header styles> */
+.main-header {
+  background-color: #337ab7;
+  padding-top: 10px;
+}
+.main-header .logo {
+  background: url(../img/logo.jpg) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 38px;
+}
+.main-header .navbar {
+  min-height: 0px;
+  margin-bottom: 0px;
+}
+.main-header .main-header-searchbar .search-text {
+  width: 100%;
+}
+@media (max-width: 1030px) {
+  .main-header .navbar-right {
+    margin-right: -5px;
+  }
+  .main-header .navbar-top-links {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
+  .main-header .navbar-right {
+    margin-right: -12px;
+  }
+  .main-header .navbar-top-links {
+    margin-left: -11px;
+  }
+}
+@media only screen and (min-device-width: 972px) and (max-device-width: 1024px) {
+  .main-header .navbar-top-links {
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .main-header .main-header-searchbar {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .main-header .navbar-top-links {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .main-header .navbar-top-links .navbar-right {
+    margin-right: -6px;
+  }
+  .main-header .navbar-top-links .navbar-right .dropdown {
+    margin-left: -3px;
+  }
+}
+.main-header .navbar-top-links .navbar-right li {
+  display: inline-block;
+}
+.main-header .xs-user-dropdown {
+  float: right;
+}
+.main-header .xs-searchbar .xs-searchbar-form {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+/* </ header styles> */
+/* <categories styles> */
+.main-header-menubar .navbar-nav > li > a {
+  color: white;
+}
+.main-header-menubar .navbar-nav li a:hover,
+.main-header-menubar .navbar-nav li a:focus {
+  background-color: transparent;
+  color: yellow;
+}
+.main-header-menubar .nav .open > a {
+  background-color: transparent;
+}
+.main-header-menubar .nav .open > a:focus,
+.main-header-menubar .nav .open > a:hover {
+  background-color: transparent;
+}
+.main-header-menubar .nav,
+.main-header-menubar .collapse,
+.main-header-menubar .dropup,
+.main-header-menubar .dropdown {
+  position: static;
+}
+.main-header-menubar .container {
+  position: relative;
+}
+.main-header-menubar .dropdown-menu {
+  left: auto;
+}
+.main-header-menubar .dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+}
+.main-header-menubar .dropdown-menu li a:hover {
+  color: blue;
+}
+.main-header-menubar .navbar-nav .dropdown .dropdown-menu.top-category {
+  left: 0;
+  right: 0;
+}
+.main-header-menubar .navbar-nav .dropdown li {
+  list-style: none;
+}
+.main-header-menubar .navbar-nav .dropdown li .category-head .caret {
+  transform: rotate(270deg);
+}
+/* </ categories styles> */
+/* <userMenu styles> */
+.main-header .usermenu-dropdown ul {
+  padding-left: 5px;
+}
+.main-header .usermenu-dropdown li {
+  width: 100%;
+  list-style: none;
+}
+.main-header .usermenu-dropdown li a {
+  text-decoration: none;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: black;
+}
+.main-header .usermenu-dropdown li a:hover {
+  color: blue;
+}
+.main-header .usermenu-dropdown .sign-in {
+  padding-left: 5px;
+}
+.main-header .usermenu-dropdown .sign-in button {
+  width: 95%;
+}
+/* </userMenu styles> */
+/* <footer styles> */
+.main-footer {
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+.main-footer .footer-links ul {
+  padding: 0px;
+  width: 80%;
+}
+.main-footer .footer-links li {
+  list-style: none;
+  border-bottom: 1px solid lightgray;
+}
