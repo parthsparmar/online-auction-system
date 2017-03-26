@@ -1,0 +1,146 @@
+<header class="container-fluid main-header">
+  <div class="visible-xs">
+    <div class="row">
+      <span class="col-xs-2">
+        <button type="button" class="btn btn-md btn-primary " data-toggle="collapse" data-target=".main-header-menubar .navbar-collapse">
+          <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </button>
+      </span>
+      <div class="col-xs-2">
+        <span class="logo"></span>
+      </div>
+      <div class="col-xs-8">
+        <div class="dropdown xs-user-dropdown">
+          {{{userMenu}}}
+        </div>
+      </div>
+    </div>
+    <div class="row xs-searchbar">
+      <div class="col-xs-12">
+        <form id="header_search_bar_form" class="form-group xs-searchbar-form" method="get" action="http://www.google.com">
+          <div class="input-group">
+            <input type="text" class="search-text form-control" name="searchtext" maxlength="120">
+            <div class="input-group-btn">
+              <button name="submit" value="search" class="btn btn-primary btn-md">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="hidden-xs">
+    <div class="row">
+      <div class="col-sm-2 text-uppercase">
+        <span class="visible-sm hidden-lg logo"></span>
+        <span class="visible-lg hidden-sm logo"></span>
+      </div>
+
+      <!-- HTML for SEARCH BAR -->
+      <div class="col-sm-8 main-header-searchbar">
+        <form id="header_search_bar_form" class="form-group" method="get" action="http://www.google.com">
+          <div class="input-group">
+            <input type="text" class="search-text form-control" name="searchtext" maxlength="120">
+            <div class="input-group-btn">
+              <button name="submit" value="search" class="btn btn-primary btn-md">
+                <i class="glyphicon glyphicon-search"></i>
+                <span>Search</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-sm-2 navbar-top-links">
+        <ul class="nav navbar navbar-right">
+          <li>
+            <button class="btn btn-primary btn-md cart-icon hidden-lg">      
+              <i class="glyphicon glyphicon-shopping-cart"></i>
+            </button>
+            <button class="btn btn-primary btn-md cart-icon visible-lg">   
+              <span>Your Cart</span>   
+              <i class="glyphicon glyphicon-shopping-cart"></i>
+            </button>
+          </li>
+          <li class="dropdown">
+            {{{ userMenu }}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu bar -->
+  <div class="main-header-menubar">
+    <div class="navbar navnar-default" role="navigation">
+      <div class="container">
+        <!-- Categories for screens larger than xs -->
+        <div class="hidden-xs">
+          <ul class="nav navbar-nav"> 
+            {{#each categories as |value key|}}
+            <li class="dropdown" category-id="{{value.categoryId}}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{value.categoryName}} <b class="caret"></b> </a>
+              {{#if value.subCategories.length }}
+              <div class="dropdown-menu top-category">
+                <div class="row top-category-content">
+                  {{#each value.subCategories as |subCat subCatKey| }}
+                  <div class="col-sm-{{#divide 12 value.subCategories.length}}{{/divide}}">
+                    <ul>
+                      <li category-id="{{subCat.categoryId}}"> 
+                        <a href="#">
+                          <b class="category-head">
+                            {{subCat.categoryName}}
+                            <b class="caret"></b>
+                          </b>
+                        </a>
+                      </li>
+                      {{#each subCat.subCategories as |subCat subCatKey|}}
+                      <li category-id="{{subCat.categoryId}}"> 
+                        <a href="#">
+                          {{subCat.categoryName}}
+                        </a>
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+              {{/if}}
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- Categories for screens xs or smaller -->
+        <div class="visible-xs">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              {{#each categories as |category key|}}
+              <li class="dropdown" category-id="{{category.categoryId}}">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{category.categoryName}} <b class="caret"></b> </a>
+                {{#generateSubCategories '<ul class="dropdown-menu"></ul>' category}}
+                <li category-id="{{subCat.categoryId}}"> 
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    {{#if subCat.isCategoryHead}}
+                    <b class="category-head">
+                    {{subCat.categoryName}}
+                    </b>
+                    <b class="caret"></b>
+                    {{else}}
+                    {{subCat.categoryName}}
+                    {{/if}}
+                  </a>
+                  {{{moreSubCategories}}}
+                </li>
+                {{/generateSubCategories}}
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{{#scriptsForMainHeader}} {{/scriptsForMainHeader}}

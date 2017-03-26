@@ -1,0 +1,48 @@
+{
+  "name": "online-auction-system",
+  "description": "Online auction C2C type of system",
+  "main": "index.html",
+  "authors": [
+    "parth parmar"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jaydeep987/online-auction-system",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "handlebars": "^4.0.5",
+    "bootstrap": "^3.3.7",
+    "bullhorn-handlebars-helpers": "^0.5.0"
+  },
+  "overrides": {
+    "requirejs": {
+      "main": [
+        "require.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "./dist/js/bootstrap.js",
+        "./dist/css/*.min.*",
+        "./dist/fonts/*.*"
+      ]
+    },
+    "handlebars": {
+      "main": [
+        "handlebars.amd.js"
+      ]
+    },
+    "bullhorn-handlebars-helpers": {
+      "main": [
+        
+      ]
+    }
+  }
+}
