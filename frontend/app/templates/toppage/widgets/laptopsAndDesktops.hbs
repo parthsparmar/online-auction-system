@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="assets/styles/toppage/widgets/laptopAndDesktops.css">
+<div class="container-fluid">
+  <div class="laptops-and-desktops-random-widget">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="slider-text">
+          <span class="text lead"> <h2> Laptops &amp; Desktops </h2> </span>
+          <span>
+            <button type="button" class="btn btn-primary ld-viewmore btn-viewall">
+              <span> View all </span>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div id="laptopsAndDesktopsSlider" class="slideshow-type1-main">
+          <div class="widget-settings">
+            <div class="widget-settings-mock"
+              data-mock-data='{"status":"Success","items":[{"itemName":"item0","itemImageUrl":"http://item.image.url/0","itemPrice":0,"itemUrl":"/item/item0"},{"itemName":"item1","itemImageUrl":"http://item.image.url/1","itemPrice":183.9044136108483,"itemUrl":"/item/item1"},{"itemName":"item2","itemImageUrl":"http://item.image.url/2","itemPrice":1586.6603113138021,"itemUrl":"/item/item2"},{"itemName":"item3","itemImageUrl":"http://item.image.url/3","itemPrice":2003.7267481310985,"itemUrl":"/item/item3"},{"itemName":"item4","itemImageUrl":"http://item.image.url/4","itemPrice":1838.1176724111174,"itemUrl":"/item/item4"},{"itemName":"item5","itemImageUrl":"http://item.image.url/5","itemPrice":527.9217307544936,"itemUrl":"/item/item5"},{"itemName":"item6","itemImageUrl":"http://item.image.url/6","itemPrice":4055.1409168964183,"itemUrl":"/item/item6"},{"itemName":"item7","itemImageUrl":"http://item.image.url/7","itemPrice":5508.471560264981,"itemUrl":"/item/item7"},{"itemName":"item8","itemImageUrl":"http://item.image.url/8","itemPrice":5395.258496795778,"itemUrl":"/item/item8"},{"itemName":"item9","itemImageUrl":"http://item.image.url/9","itemPrice":5426.775309444408,"itemUrl":"/item/item9"},{"itemName":"item10","itemImageUrl":"http://item.image.url/10","itemPrice":2075.406040901371,"itemUrl":"/item/item10"},{"itemName":"item11","itemImageUrl":"http://item.image.url/11","itemPrice":2395.0837522199577,"itemUrl":"/item/item11"},{"itemName":"item12","itemImageUrl":"http://item.image.url/12","itemPrice":4215.155395268869,"itemUrl":"/item/item12"},{"itemName":"item13","itemImageUrl":"http://item.image.url/13","itemPrice":2806.92701745594,"itemUrl":"/item/item13"},{"itemName":"item14","itemImageUrl":"http://item.image.url/14","itemPrice":12077.274086166846,"itemUrl":"/item/item14"}]}'>
+            </div>
+          </div>
+          <script type="text/template" id="laptopsAndDesktopsSliderTpl">
+            <ul class="content-slider">
+              <li class="item">
+                <a href="#ITEM_URL#" class="item-wrap">
+                  <div class="item-image">
+                    <img src="#ITEM_IMAGE_URL#" alt="#ITEM_NAME#" class="item-image">
+                  </div>
+                  <div class="item-info">
+                    <span class="item-name"> #ITEM_NAME# </span>
+                    <div class="price-info">
+                      <span class="item-price"> #ITEM_PRICE# </span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </script>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
+{{#loadModule "laptopsAndDesktopsWidget"}} {{/loadModule}}

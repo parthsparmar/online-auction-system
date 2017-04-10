@@ -19,7 +19,12 @@
     "requirejs": "^2.3.3",
     "handlebars": "^4.0.5",
     "bootstrap": "^3.3.7",
-    "bullhorn-handlebars-helpers": "^0.5.0"
+    "bullhorn-handlebars-helpers": "^0.5.0",
+    "foundation-icon-fonts": "*",
+    "components-font-awesome": "^4.7.0",
+    "bootstrap-fileinput": "^4.3.9",
+    "jquery-mask-plugin": "^1.14.10",
+    "lightslider": "^1.1.6"
   },
   "overrides": {
     "requirejs": {
@@ -40,8 +45,21 @@
       ]
     },
     "bullhorn-handlebars-helpers": {
+      "main": []
+    },
+    "bootstrap-fileinput": {
       "main": [
-        
+        "css/fileinput.min.css",
+        "themes/explorer/theme.css"
+      ]
+    },
+    "jquery-mask-plugin": {
+      "main": []
+    },
+    "lightslider": {
+      "main": [
+        "dist/js/lightslider.js",
+        "dist/css/lightslider.css"
       ]
     }
   }

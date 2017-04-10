@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="assets/styles/user/signin.css">
+<div class="container">
+    <div class="signin-form center-block col-md-6 col-sm-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Sign In</div>
+            </div>
+            <div class="panel-body">
+                <div class="login-alert alert alert-danger col-sm-12"></div>
+                <form id="signinform" class="form-horizontal" role="form">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" id="username" name="username" class="form-control" value="" placeholder="email">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" id="password" name="password" class="form-control" value="" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 controls">
+                            <a id="btn-singin" class="btn btn-success">Sign in</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 control">
+                            <div class="no-account">
+                                Don't have an account ?
+                                <a jscf-url="signup" href="">Sign up here</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

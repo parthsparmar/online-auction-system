@@ -27,20 +27,11 @@ For front-end, normally html/css/js are used but I wanted to learn some new tech
     - MySQL database
     - Apache server
 
-## How to start with project ? ##
-For development purpose, you need to install `node.js` in your system. After that go to this project directory and use following commands:
-  - `npm i -g yarn grunt`
-  - `yarn`
-
-**To build project:**  
-  - `grunt`
-
-**To run in browser:**  
-Before you do so, you need to set your machine's IP address in `package.json` file, under `serverHost`. This will be automated soon but till that you need to do manually. After than execute following:
-  - `grunt serve`
-
-**For production build:**
-  - `grunt build`
-
-To run production build in browser:
-  - `grunt serve --directory dist`
+  ## How to start with project? ##
+  **Development**  
+  For development purpose, you need to work with two components: frontend and backend. Both are separate and independent. 
+  For more details about how to work with each component, visit to that parituclar project.
+  
+  **Project execution**  
+  For frontend you need to make production build. After that upload that build and the backend to your server.
+  Before running project, you need to do setup. For that visit `<project>/setup/` and follow instructions.

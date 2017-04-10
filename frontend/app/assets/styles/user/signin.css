@@ -1,0 +1,17 @@
+.signin-form .panel-body {
+  padding-top: 30px;
+}
+.signin-form .input-group {
+  margin-bottom: 25px;
+}
+.signin-form .form-group {
+  margin-top: 10px;
+}
+.signin-form .no-account {
+  border-top: 1px solid#888;
+  padding-top: 15px;
+  font-size: 85%;
+}
+.signin-form .alert-danger {
+  display: none;
+}

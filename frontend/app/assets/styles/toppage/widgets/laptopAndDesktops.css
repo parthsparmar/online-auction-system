@@ -1,0 +1,49 @@
+.slideshow-type1-main {
+  margin: 15px 0px 10px 0px;
+}
+.slideshow-type1-main .slider-left-wrapper,
+.slideshow-type1-main .slider-right-wrapper {
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.98);
+  transition: box-shadow 0.2s ease;
+  height: 50px;
+  padding-top: 17px;
+  padding-left: 9px;
+}
+.slideshow-type1-main .item {
+  width: 150px;
+}
+.slideshow-type1-main .item a {
+  text-decoration: none;
+}
+.laptops-and-desktops-random-widget {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 0px 15px 5px 5px;
+  margin-top: 10px;
+}
+.laptops-and-desktops-random-widget .slider-text {
+  margin: 15px 0px 10px 0px;
+  text-align: center;
+  padding-bottom: 5px;
+  background-image: linear-gradient(to top, rgba(255, 239, 239, 0.701961), rgba(255, 255, 255, 0));
+  background-size: 100% 196px;
+}
+.laptops-and-desktops-random-widget .slider-text .btn-viewall span {
+  text-transform: uppercase;
+}
+.laptops-and-desktops-random-widget .slider-text .glyphicon-option-horizontal {
+  top: 7px;
+}
+.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-info {
+  font-size: medium;
+}
+.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-name {
+  font-weight: 400;
+  color: #388e3c;
+}
+.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-price {
+  color: black;
+  font-weight: 500;
+}
