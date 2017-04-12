@@ -16,33 +16,41 @@
 .slideshow-type1-main .item a {
   text-decoration: none;
 }
-.laptops-and-desktops-random-widget {
+.new-arrivals-widget {
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 0px 15px 5px 5px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
-.laptops-and-desktops-random-widget .slider-text {
+.new-arrivals-widget .slider-text {
   margin: 15px 0px 10px 0px;
   text-align: center;
   padding-bottom: 5px;
 }
-.laptops-and-desktops-random-widget .slider-text .btn-viewall span {
+.new-arrivals-widget .slider-text .btn-viewall span {
   text-transform: uppercase;
 }
-.laptops-and-desktops-random-widget .slider-text .glyphicon-option-horizontal {
+.new-arrivals-widget .slider-text .glyphicon-option-horizontal {
   top: 7px;
 }
-.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-info {
+.new-arrivals-widget #newArrivalsSlider .item-info {
   font-size: medium;
 }
-.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-name {
+.new-arrivals-widget #newArrivalsSlider .item-name {
   font-weight: 400;
   color: #388e3c;
 }
-.laptops-and-desktops-random-widget #laptopsAndDesktopsSlider .item-price {
+.new-arrivals-widget #newArrivalsSlider .item-price {
   color: black;
   font-weight: 500;
+  text-align: center;
+}
+.new-arrivals-widget #newArrivalsSlider .item-category {
+  color: black;
+  opacity: .6;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   text-align: center;
 }

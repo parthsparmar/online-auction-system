@@ -31,6 +31,7 @@ requirejs.config({
     'moment': '/bower_components/moment/moment',
     'underscore': '/bower_components/underscore/underscore',
     'lightslider': '/bower_components/lightslider/dist/js/lightslider',
+    'item': 'js/compiled-templates/item',
     'searchpage': 'js/compiled-templates/searchpage',
     'sell': 'js/compiled-templates/sell',
     'toppage': 'js/compiled-templates/toppage',
@@ -40,8 +41,9 @@ requirejs.config({
     'mainHeader': 'js/toppage/modules/mainHeader',
     'homeAppliancesWidget': 'js/toppage/modules/widgets/homeAppliancesWidget',
     'laptopsAndDesktopsWidget': 'js/toppage/modules/widgets/laptopsAndDesktopsWidget',
-    'signin': 'js/user/modules/signin',
-    'signup': 'js/user/modules/signup',
+    'newArrivalsWidget': 'js/toppage/modules/widgets/newArrivalsWidget',
+    'itemViewCtrl': 'js/controllers/item/itemViewCtrl',
+    'homepageWidgetsCtrl': 'js/controllers/toppage/homepageWidgetsCtrl',
     // </include_paths>
   },
 });

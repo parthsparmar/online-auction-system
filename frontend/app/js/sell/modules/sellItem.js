@@ -1,5 +1,5 @@
-define(['jquery', 'handlebars', 'sell', 'fileinput', 'jscf', 'explorertheme'],
-  function sellItem($, Handlebars, sellingPages, fileinput, jscf) {
+define(['jquery', 'handlebars', 'fileinput', 'jscf', 'explorertheme'],
+  function sellItem($, Handlebars, fileinput, jscf) {
     'use strict';
 
     return function callback() {
@@ -11,8 +11,6 @@ define(['jquery', 'handlebars', 'sell', 'fileinput', 'jscf', 'explorertheme'],
         dropZoneEnabled      : false,
         uploadUrl            : '/dfd/s',
       };
-
-      $('#homepage').html(sellingPages.sellItem());
 
       if (!jscf.browser.isSp) {
         fileinputOptions.theme = 'explorer';

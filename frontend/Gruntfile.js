@@ -263,6 +263,11 @@ module.exports = function (grunt) {
     let endLine;
     let fileName;
 
+    function concatExpandedFiles(file) {
+      fileName = file.substring(file.lastIndexOf('/') + 1).replace('.js', '');
+      compiledTpls = `${compiledTpls}\n    '${fileName}': '${file.replace('.js', '').replace('app/', '')}',`;
+    }
+
     Object.keys(dependencies).forEach((key) => {
       if (key === 'js') {
         dependencies[key].map((path) => {
@@ -274,17 +279,14 @@ module.exports = function (grunt) {
       }
     });
 
-    grunt.file.expand('app/js/compiled-templates/*.js').map((file) => {
-      fileName = file.substring(file.lastIndexOf('/') + 1).replace('.js', '');
-      compiledTpls = `${compiledTpls}\n    '${fileName}': '${file.replace('.js', '').replace('app/', '')}',`;
-    });
+    grunt.file.expand('app/js/compiled-templates/*.js').map(concatExpandedFiles);
 
-    grunt.file.expand('app/js/**/modules/**/*.js').map((file) => {
-      fileName = file.substring(file.lastIndexOf('/') + 1).replace('.js', '');
-      compiledTpls = `${compiledTpls}\n    '${fileName}': '${file.replace('.js', '').replace('app/', '')}',`;
-    });
+    grunt.file.expand('app/js/**/modules/**/*.js').map(concatExpandedFiles);
 
-        // find startLine & endLine
+    // include controllers
+    grunt.file.expand('app/js/controllers/**/*.js').map(concatExpandedFiles);
+
+    // find startLine & endLine
     configFile.map((kline, vlineno) => {
       linesWithNo[vlineno + 1] = kline;
       if (/\/\/ <include_paths>/.test(kline)) {

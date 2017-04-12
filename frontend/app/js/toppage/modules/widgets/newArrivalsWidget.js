@@ -1,12 +1,12 @@
 if (typeof define === 'function' && define.amd) {
-  define(['jquery', 'jscf', 'lightslider'], function laptopsAndDesktopsWidgetModule($, jscf) {
+  define(['jquery', 'jscf', 'lightslider'], function newArrivalsWidgetModule($, jscf) {
     'use strict';
 
-    return function laptopsAndDesktopsWidget(block) {
+    return function newArrivalsWidget() {
       var settings = {
         css: {
-          sliderTpl         : '#laptopsAndDesktopsSliderTpl',
-          widget            : '#laptopsAndDesktopsSlider',
+          sliderTpl         : '#newArrivalsSliderTpl',
+          widget            : '#newArrivalsSlider',
           sliderItem        : '.item',
           widgetSettings    : '.widget-settings',
           widgetSettingsMock: '.widget-settings-mock',
@@ -71,11 +71,11 @@ if (typeof define === 'function' && define.amd) {
 
         for (i = 0; i < n; i++) {
           item = items[i];
-          sliderData['#ITEM_ID#'] = item.itemId;
           sliderData['#ITEM_NAME#'] = item.itemName;
           sliderData['#ITEM_IMAGE_URL#'] = item.itemImageUrl;
           sliderData['#ITEM_URL#'] = item.itemUrl;
           sliderData['#ITEM_PRICE#'] = item.itemPrice;
+          sliderData['#ITEM_CATEGORY#'] = item.categoryName;
 
           $sliderItem = $liItem.clone();
           $sliderItem.html(jscf.commonUtils.replacePlaceholders($sliderItem.html(), sliderData));
@@ -132,6 +132,6 @@ if (typeof define === 'function' && define.amd) {
 
       // start execution by initing
       init();
-    }; // /laptopsAndDesktopsWidget()
-  }); // /define ()
+    }; // /newArrivalsWidget
+  }); // define
 } // /if

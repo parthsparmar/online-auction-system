@@ -104,28 +104,9 @@ function homepage($, Handlebars, toppage, mainHeader, divide) {
       }(mcategory, mwrapper));
     });
 
-    /**
-     * This is actually a kind of scripts loader.
-     * But it doesn't load script actually!!
-     * As all scripts loaded by requirejs async, we defined our scripts as modules under modules directory of particular page.
-     * and configure those modules in `module_config.js` for requirejs, and we can load that module in particular js
-     * like here we wanted to do something after mainHeader gets loaded, then we defined that functionality in
-     * `js/toppage/modules/mainHeader.js` and configured in `module_config.js` and loaded that module in this js as `mainHeader`
-     * Now we can call it any time to do required operations after mainHeader gets loaded. So inside header.hbs, we use this helper
-     * to call that function.
-     */
-    Handlebars.registerHelper('loadModule', function loadModule(moduleName, block) {
-      require([moduleName], function requireModule(loadedModule) {
-        loadedModule(block);
-      });
-      return '';
-    });
-
     // Register partials
     Handlebars.registerPartial('header', toppage.header({ categories: categories, userMenu: toppage.userMenu() }));
     Handlebars.registerPartial('footer', toppage.footer());
-    Handlebars.registerPartial('laptopsAndDesktopsWidget', toppage.laptopsAndDesktops());
-    Handlebars.registerPartial('homeAppliancesWidget', toppage.homeAppliances());
 
     $('#homepage').html(toppage.homepage());
   };

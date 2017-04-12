@@ -4,17 +4,38 @@ if (typeof require === 'function') {
 
     jscf.config(function setRoutes(routeProvider) {
       routeProvider
+        .when('/homepage', {
+          requireTpl: 'homepage',
+          root      : true,
+        })
         .when('/', {
-          targetTpl: 'homepage',
+          requireTpl  : 'toppage',
+          controller  : 'homepageWidgetsCtrl',
+          templateName: 'homepageWidgets',
+          target      : '.main-container',
+          dependsOn   : ['homepage'],
         })
         .when('/signin', {
-          targetTpl: 'signin',
+          requireTpl  : 'user',
+          templateName: 'signin',
+          target      : '#homepage',
         })
         .when('/signup', {
-          targetTpl: 'signup',
+          requireTpl  : 'user',
+          templateName: 'signup',
+          target      : '#homepage',
+        })
+        .when('/itemview', {
+          requireTpl  : 'item',
+          templateName: 'itemView',
+          controller  : 'itemViewCtrl',
+          target      : '.main-container',
+          dependsOn   : ['homepage'],
         })
         .when('/sellItem', {
-          targetTpl: 'sellItem',
+          requireTpl  : 'sell',
+          templateName: 'sellItem',
+          target      : '#homepage',
         });
     });
     jscf.init('onlineauction', 'app');
