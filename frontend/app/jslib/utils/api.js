@@ -26,21 +26,23 @@ if (typeof define === 'function' && define.amd) {
     apiUtils.callApi = function callApi(options) {
       var def = $.Deferred();
       var apiUrl;
+      var type;
 
       if (options.mockData) {
         def.resolve(JSON.parse(options.mockData));
       } else {
         apiUrl = options.mockUrl ? options.mockUrl : options.apiUrl;
+        type = options.type ? options.type : 'POST';
 
         $.ajax({
           url     : apiUrl,
+          type    : type,
           data    : options.data,
           dataType: 'jsonp',
-          jsonp   : 'callback' + new Date().getTime(),
           timeout : options.apiTimeout || API_TIMEOUT,
           success : function callApiSuccess(data) {
             if (data) {
-              def.resolve(JSON.parse(data));
+              def.resolve(data);
             } else {
               def.reject(data);
             }

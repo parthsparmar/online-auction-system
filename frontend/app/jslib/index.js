@@ -50,10 +50,42 @@ if (typeof define === 'function' && define.amd) {
        * to call that function.
        */
       Handlebars.registerHelper('loadModule', function loadModule(moduleName, block) {
+        var params = framework.commonUtils.spread(arguments);
         require([moduleName], function requireModule(loadedModule) {
-          loadedModule(block);
+          loadedModule(params.slice(1));
         });
         return '';
+      });
+
+      /**
+       * Useful conditional helper for Handlebars. This helper provides actual conditional
+       * expression to use.
+       */
+      Handlebars.registerHelper('ifCond', function ifConditionHelper(v1, operator, v2, options) {
+        switch (operator) {
+          case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+          case '===':
+            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+          case '!=':
+            return (v1 != v2) ? options.fn(this) : options.inverse(this);
+          case '!==':
+            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+          case '<':
+            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+          case '<=':
+            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+          case '>':
+            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+          case '>=':
+            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+          case '&&':
+            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+          case '||':
+            return (v1 || v2) ? options.fn(this) : options.inverse(this);
+          default:
+            return options.inverse(this);
+        }
       });
 
       /**

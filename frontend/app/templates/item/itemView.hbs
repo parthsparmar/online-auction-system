@@ -1,2 +1,110 @@
-Here view item
-{{a}}
+<link href="assets/styles/item/itemView.css" rel="stylesheet">
+<div class="container-fluid">
+  <div class="item-overview-panel">
+    <div class="center-box">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="item-image-box">
+            <img src="" alt="" class="item-img">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="detail-header">
+            <div class="category-info">
+              <span>{{item.categoryName}} <i class="glyphicon glyphicon-triangle-right"></i></span>
+            </div>
+            <div class="item-name-title">
+              <span class="item-name">{{item.itemName}}</span>
+            </div>
+          </div>
+          <div>
+            <div class="col-md-2">
+              <div class="item-price-detail">
+                <span class="item-price">{{item.itemPrice}}</span>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <div class="add-to-cart-button">
+                <button type="button" id="addToCartBtn" class="btn btn-primary">
+                  <i class="fa fa-cart-plus"></i>
+                  <span> Add to cart </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-info">
+            <div class="label-delivery-info col-md-2">
+              <label> Delivery </label>
+            </div>
+            <div class="col-md-10">
+              <div class="info-detail-wrapper">
+                <table>
+                  <tr>
+                    <td>
+                      <span class="label">Burden of delivery:</span>
+                    </td>
+                    <td>
+                      <i class="fi-paypal"></i>
+                      {{item.deliveryBurden}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="label">Item is from:</span>
+                    </td>
+                    <td>
+                      <i class="glyphicon glyphicon-map-marker"></i>
+                      {{item.itemSource}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="label">Can ship within: </span>
+                    </td>
+                    <td>
+                      <i class="fa fa-truck"></i>
+                      {{item.shipTime}}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="item-features">
+            <div class="label-item-features col-md-2">
+              <label>Features</label>
+            </div>
+            <div class="col-md-10">
+              <ul class="feature-list">
+                <li> abc </li>
+                <li> sfjs </li>
+                <li> sehwr </li>
+              </ul>
+            </div>
+          </div>
+          <div class="seller-info">
+            <div class="label-seller-info col-md-2 col-xs-2">
+              <label>Seller</label>
+            </div>
+            <div class="col-md-10 col-xs-10">
+              <span>
+                <a href="" class="seller-redirect">{{item.sellerName}}</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Description area -->
+  <div class="item-description-panel">
+    <div class="item-description-area">
+      <span class="description-title"><i class="glyphicon glyphicon-info-sign"></i> Details</span>
+      <div class="divider"></div>
+      <div class="details">
+        <span>{{item.description}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{{#loadModule 'itemView' item}} {{/loadModule}}

@@ -1,0 +1,118 @@
+.item-overview-panel {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.item-overview-panel .item-image-box {
+  min-height: 350px;
+  border: 1px solid #f0f0f0;
+  margin: 5px;
+}
+.item-overview-panel .detail-header {
+  margin: 5px;
+  font-size: x-large;
+  font-weight: 500;
+  color: #000;
+}
+.item-overview-panel .detail-header .category-info {
+  font-size: small;
+  color: #878787;
+  margin-left: 5px;
+}
+.item-overview-panel .detail-header .category-info i {
+  font-size: 10px;
+}
+.item-overview-panel .detail-header .item-name-title {
+  line-height: 1.4;
+  padding-left: 5px;
+}
+.item-overview-panel .item-price-detail {
+  color: #000;
+}
+.item-overview-panel .item-price-detail .item-price {
+  font-weight: 600;
+  font-size: x-large;
+}
+.item-overview-panel .add-to-cart-button {
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+.item-overview-panel .add-to-cart-button button {
+  width: 200px;
+  font-size: medium;
+}
+.item-overview-panel .delivery-info {
+  font-size: medium;
+  margin-top: 15px;
+}
+.item-overview-panel .delivery-info .info-detail-wrapper {
+  margin-bottom: 10px;
+}
+.item-overview-panel .delivery-info .label-delivery-info {
+  color: #878787;
+}
+.item-overview-panel .delivery-info table {
+  color: #388e3c;
+}
+.item-overview-panel .delivery-info .label {
+  color: #212121;
+  font-weight: 500;
+  font-size: medium;
+}
+.item-overview-panel .item-features {
+  margin-top: 10px;
+  font-size: medium;
+}
+.item-overview-panel .item-features .label-item-features {
+  color: #878787;
+}
+.item-overview-panel .item-features .feature-list li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 8px 16px;
+}
+.item-overview-panel .item-features .feature-list li:after {
+  content: "";
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  border-radius: 50%;
+  background: #c2c2c2;
+}
+.item-overview-panel .seller-info {
+  font-size: medium;
+}
+.item-overview-panel .seller-info .label-seller-info {
+  color: #878787;
+}
+.item-description-panel {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.item-description-panel .item-description-area {
+  margin: 10px;
+  padding: 5px;
+}
+.item-description-panel .divider {
+  border: 0.1px solid #878787;
+  height: 1px;
+  width: 98%;
+  margin-left: 1%;
+  opacity: 0.2;
+}
+.item-description-panel .description-title {
+  padding: 5px;
+  color: #212121;
+  font-size: x-large;
+  font-weight: 600;
+}
+.item-description-panel .details {
+  margin: 10px 0px 10px 15px;
+  font-size: medium;
+  color: #332;
+}

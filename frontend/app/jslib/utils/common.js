@@ -128,6 +128,28 @@ if (typeof define === 'function' && define.amd) {
       return retAttrs;
     };
 
+    /**
+     * Works as ES6 spread operator
+     */
+    commonUtils.spread = function spread(obj) {
+      var len;
+      var key;
+      var k;
+
+      if (!obj.length) {
+        return obj;
+      }
+
+      len = obj.length;
+      key = Array(len);
+      k = 0;
+
+      for (; k < len; k++) {
+        key[k] = obj[k];
+      }
+      return key;
+    };
+
     return commonUtils;
   });
 }

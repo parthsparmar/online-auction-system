@@ -1,10 +1,28 @@
 define(['handlebars'], function (Handlebars) {
 var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['itemView'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var helper;
+templates['itemView'] = template({"1":function(container,depth0,helpers,partials,data) {
+    return " ";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
-  return "Here view item\n"
-    + container.escapeExpression(((helper = (helper = helpers.a || (depth0 != null ? depth0.a : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"a","hash":{},"data":data}) : helper)));
+  return "<link href=\"assets/styles/item/itemView.css\" rel=\"stylesheet\">\n<div class=\"container-fluid\">\n  <div class=\"item-overview-panel\">\n    <div class=\"center-box\">\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <div class=\"item-image-box\">\n            <img src=\"\" alt=\"\" class=\"item-img\">\n          </div>\n        </div>\n        <div class=\"col-md-8\">\n          <div class=\"detail-header\">\n            <div class=\"category-info\">\n              <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.categoryName : stack1), depth0))
+    + " <i class=\"glyphicon glyphicon-triangle-right\"></i></span>\n            </div>\n            <div class=\"item-name-title\">\n              <span class=\"item-name\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.itemName : stack1), depth0))
+    + "</span>\n            </div>\n          </div>\n          <div>\n            <div class=\"col-md-2\">\n              <div class=\"item-price-detail\">\n                <span class=\"item-price\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.itemPrice : stack1), depth0))
+    + "</span>\n              </div>\n            </div>\n            <div class=\"col-md-10\">\n              <div class=\"add-to-cart-button\">\n                <button type=\"button\" id=\"addToCartBtn\" class=\"btn btn-primary\">\n                  <i class=\"fa fa-cart-plus\"></i>\n                  <span> Add to cart </span>\n                </button>\n              </div>\n            </div>\n          </div>\n          <div class=\"delivery-info\">\n            <div class=\"label-delivery-info col-md-2\">\n              <label> Delivery </label>\n            </div>\n            <div class=\"col-md-10\">\n              <div class=\"info-detail-wrapper\">\n                <table>\n                  <tr>\n                    <td>\n                      <span class=\"label\">Burden of delivery:</span>\n                    </td>\n                    <td>\n                      <i class=\"fi-paypal\"></i>\n                      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.deliveryBurden : stack1), depth0))
+    + "\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <span class=\"label\">Item is from:</span>\n                    </td>\n                    <td>\n                      <i class=\"glyphicon glyphicon-map-marker\"></i>\n                      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.itemSource : stack1), depth0))
+    + "\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <span class=\"label\">Can ship within: </span>\n                    </td>\n                    <td>\n                      <i class=\"fa fa-truck\"></i>\n                      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.shipTime : stack1), depth0))
+    + "\n                    </td>\n                  </tr>\n                </table>\n              </div>\n            </div>\n          </div>\n          <div class=\"item-features\">\n            <div class=\"label-item-features col-md-2\">\n              <label>Features</label>\n            </div>\n            <div class=\"col-md-10\">\n              <ul class=\"feature-list\">\n                <li> abc </li>\n                <li> sfjs </li>\n                <li> sehwr </li>\n              </ul>\n            </div>\n          </div>\n          <div class=\"seller-info\">\n            <div class=\"label-seller-info col-md-2 col-xs-2\">\n              <label>Seller</label>\n            </div>\n            <div class=\"col-md-10 col-xs-10\">\n              <span>\n                <a href=\"\" class=\"seller-redirect\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.sellerName : stack1), depth0))
+    + "</a>\n              </span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- Description area -->\n  <div class=\"item-description-panel\">\n    <div class=\"item-description-area\">\n      <span class=\"description-title\"><i class=\"glyphicon glyphicon-info-sign\"></i> Details</span>\n      <div class=\"divider\"></div>\n      <div class=\"details\">\n        <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.description : stack1), depth0))
+    + "</span>\n      </div>\n    </div>\n  </div>\n</div>\n"
+    + ((stack1 = (helpers.loadModule || (depth0 && depth0.loadModule) || helpers.helperMissing).call(depth0,"itemView",(depth0 != null ? depth0.item : depth0),{"name":"loadModule","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 return templates;
 });

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="assets/styles/cart/viewCartItems.css">
+<div class="container-fluid">
+  <div class="view-cart-items-wrap">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="view-cart-panel-wrap">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title"> 
+              <span> Total items in cart: </span> <span class="items-count">{{items.length}}</span>
+              <span class="btn-checkout-span {{#ifCond items.length '===' 0}} hide {{/ifCond}}">
+                <button type="button" class="btn btn-success btn-md btn-checkout">
+                  <span>Place Order</span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="panel-body">
+            {{#if items.length}}
+              {{#each items as |item itemIndex|}}
+                {{#with item}}
+                  <div class="row item item-row-{{itemIndex}}">
+                    <div class="col-md-3 col-xs-10">
+                      <div class="item-image">
+                        <img src="{{itemImageUrl}}" alt="{{itemName}}">
+                      </div>
+                    </div>
+                    <div class="visible-xs col-xs-1">
+                      <div class="icons">
+                        <div class="item-remove-icon">
+                          <a href="#" class="item-remove-xs" data-index="{{itemIndex}}"><i class="fi-x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8 col-xs-8">
+                      <div class="item-info">
+                        <span class="item-name"> {{itemName}} </span>
+                        <div class="category"> {{categoryName}} </div>
+                        <div class="item-price"> {{itemPrice}} </div>
+                      </div>
+                    </div>
+                    <div class="col-md-1 hidden-xs">
+                      <div class="icons">
+                        <div class="item-remove-icon">
+                          <a href="#" class="item-remove" data-index="{{itemIndex}}"><i class="fi-x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{/with}}
+              {{/each}}
+            {{/if}}
+            <div class="no-items {{#if items.length}} hide {{/if}}">
+              <div class="info">Currently there are no items in cart.</div>
+              <button jscf-url="/" type="button" class="btn btn-success btn-lg">Continue shopping...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </dvi>
+  </div>
+</div>
+{{#loadModule 'viewCartItems'}} {{/loadModule}}

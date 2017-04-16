@@ -36,6 +36,7 @@ module.exports = {
     "no-unused-vars": ["error", {
       "args": "none",
     }],
+    "prefer-rest-params": 0,
     "guard-for-in": 0,
     "no-restricted-syntax": 0,
     "prefer-template": 0,

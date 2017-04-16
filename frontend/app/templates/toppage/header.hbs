@@ -1,8 +1,8 @@
 <header class="container-fluid main-header">
-  <div class="visible-xs">
+  <div class="visible-xs xs-header">
     <div class="row">
       <span class="col-xs-2">
-        <button type="button" class="btn btn-md btn-primary " data-toggle="collapse" data-target=".main-header-menubar .navbar-collapse">
+        <button type="button" class="btn btn-lg btn-primary " data-toggle="collapse" data-target=".main-header-menubar .navbar-collapse">
           <i class="glyphicon glyphicon-menu-hamburger"></i>
         </button>
       </span>
@@ -12,9 +12,16 @@
         </a>
       </div>
       <div class="col-xs-8">
+        <span class="icons-right">
+          <button jscf-url="viewCartItems" class="btn btn-lg cart-icon btn-primary">
+            <i class="glyphicon glyphicon-shopping-cart"></i>
+            <i class="cart-items-number"></i>
+          </button>
+        
         <div class="dropdown xs-user-dropdown">
           {{{userMenu}}}
         </div>
+        </span>
       </div>
     </div>
     <div class="row xs-searchbar">
@@ -23,7 +30,7 @@
           <div class="input-group">
             <input type="text" class="search-text form-control" name="searchtext" maxlength="120">
             <div class="input-group-btn">
-              <button name="submit" value="search" class="btn btn-primary btn-md">
+              <button id="searchBtn" name="submit" value="search" class="btn btn-primary btn-md">
                 <i class="glyphicon glyphicon-search"></i>
               </button>
             </div>
@@ -42,12 +49,12 @@
       </div>
 
       <!-- HTML for SEARCH BAR -->
-      <div class="col-sm-8 main-header-searchbar">
+      <div class="col-sm-7 main-header-searchbar">
         <form id="header_search_bar_form" class="form-group" method="get" action="http://www.google.com">
           <div class="input-group">
-            <input type="text" class="search-text form-control" name="searchtext" maxlength="120">
+            <input type="text" class="search-text input-lg form-control" name="searchtext" maxlength="120">
             <div class="input-group-btn">
-              <button name="submit" value="search" class="btn btn-primary btn-md">
+              <button name="submit" value="search" class="btn btn-primary btn-lg">
                 <i class="glyphicon glyphicon-search"></i>
                 <span>Search</span>
               </button>
@@ -56,15 +63,17 @@
         </form>
       </div>
 
-      <div class="col-sm-2 navbar-top-links">
+      <div class="col-sm-3 navbar-top-links">
         <ul class="nav navbar navbar-right">
           <li>
-            <button class="btn btn-primary btn-md cart-icon hidden-lg">      
+            <button jscf-url="viewCartItems" class="btn btn-primary cart-icon hidden-lg">
               <i class="glyphicon glyphicon-shopping-cart"></i>
+              <i class="cart-items-number"></i>
             </button>
-            <button class="btn btn-primary btn-md cart-icon visible-lg">   
+            <button jscf-url="viewCartItems" class="btn btn-primary btn-lg cart-icon visible-lg">   
               <span>Your Cart</span>   
               <i class="glyphicon glyphicon-shopping-cart"></i>
+              <i class="cart-items-number"></i>
             </button>
           </li>
           <li class="dropdown">

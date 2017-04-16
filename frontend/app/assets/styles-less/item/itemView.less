@@ -1,0 +1,154 @@
+@color-black: #000;
+@label-color: #878787;
+
+.info-label() {
+  color: @label-color;
+}
+
+.panel-background() {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.item-overview-panel {
+  .panel-background();
+
+  .item-image-box {
+    min-height: 350px;
+    border: 1px solid #f0f0f0;
+    margin: 5px;
+  }
+
+  .detail-header {
+    margin: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    color: @color-black;
+
+    .category-info {
+      font-size: small;
+      color: @label-color;
+      margin-left: 5px;
+
+      i {
+        font-size: 10px;
+      }
+    }
+
+    .item-name-title {
+      line-height: 1.4;
+      padding-left: 5px;
+    }
+  }
+
+  .item-price-detail {
+    color: @color-black;
+
+    .item-price {
+      font-weight: 600;
+      font-size: x-large;
+    }
+  }
+
+  .add-to-cart-button {
+    margin-top: 2px;
+    margin-bottom: 7px;
+    
+    button {
+      width: 200px;
+      font-size: medium;
+    }
+  }
+
+  .delivery-info {
+    font-size: medium;
+    margin-top: 15px;
+    
+    .info-detail-wrapper {
+      margin-bottom: 10px;
+    }
+
+    .label-delivery-info {
+      .info-label()
+    }
+
+    table {
+      color: #388e3c;
+    }
+
+    .label {
+      color: #212121;
+      font-weight: 500;
+      font-size: medium;
+    }
+
+  }
+
+  .item-features {
+    margin-top: 10px;
+    font-size: medium;
+
+    .label-item-features {
+      .info-label()
+    }
+
+    .feature-list {
+      li {
+        list-style: none;
+        position: relative;
+        padding: 0 0 8px 16px;
+
+        &:after {
+          content: "";
+          height: 6px;
+          width: 6px;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          border-radius: 50%;
+          background: #c2c2c2;
+        }
+      }
+    }
+  }
+
+  .seller-info {
+    font-size: medium;
+
+    .label-seller-info {
+      .info-label()
+    }
+  }
+}
+
+.item-description-panel {
+  .panel-background();
+
+  .item-description-area {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .divider {
+    border: 0.1px solid #878787;
+    height: 1px;
+    width: 98%;
+    margin-left: 1%;
+    opacity: 0.2;
+  }
+
+  .description-title {
+    padding: 5px;
+    color: #212121;
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .details {
+    margin: 10px 0px 10px 15px;
+    font-size: medium;
+    color: #332;
+  }
+}

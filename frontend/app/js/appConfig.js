@@ -35,8 +35,17 @@ if (typeof require === 'function') {
         .when('/sellItem', {
           requireTpl  : 'sell',
           templateName: 'sellItem',
-          target      : '#homepage',
-        });
+          target      : '.main-container',
+          dependsOn   : ['homepage'],
+        })
+        .when('/viewCartItems', {
+          requireTpl  : 'cart',
+          templateName: 'viewCartItems',
+          controller  : 'viewCartItemsCtrl',
+          target      : '.main-container',
+          dependsOn   : ['homepage'],
+        })
+        ;
     });
     jscf.init('onlineauction', 'app');
   });

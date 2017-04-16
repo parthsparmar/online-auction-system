@@ -1,5 +1,5 @@
 if (typeof define === 'function' && define.amd) {
-  define(['./browser', './common', './number', './api'], function utilsModule(browser, common, number, api) {
+  define(['./browser', './common', './number', './api', './storage'], function utilsModule(browser, common, number, api, storage) {
     'use strict';
 
     return {
@@ -7,6 +7,7 @@ if (typeof define === 'function' && define.amd) {
       commonUtils: common,
       numberUtils: number,
       apiUtils   : api,
+      Storage    : storage,
     };
   });
 }
