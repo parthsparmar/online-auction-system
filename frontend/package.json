@@ -4,7 +4,6 @@
   "description": "Online auction C2C type of system",
   "main": "index.js",
   "moduleConfigFile": "app/js/module_config.js",
-  "serverHost": "192.168.100.108",
   "serverPort": 8000,
   "openBrowser": false,
   "directories": {
@@ -28,6 +27,11 @@
   "devDependencies": {
     "bower": "^1.8.0",
     "del": "^2.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
@@ -40,7 +44,8 @@
     "grunt-handlebars-compiler": "^0.3.0",
     "grunt-injector": "^1.1.0",
     "grunt-wiredep": "^3.0.1",
-    "less-plugin-autoprefix": "^1.5.1"
+    "less-plugin-autoprefix": "^1.5.1",
+    "os": "^0.1.1"
   },
   "dependencies": {
     "wiredep": "^4.0.0"

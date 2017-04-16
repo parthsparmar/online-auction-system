@@ -1,0 +1,166 @@
+<link rel="stylesheet" href="assets/styles/sellItem.css">
+<div class="container">
+  <div class="sellitem-form">
+    <div class="row">
+      <div class="col-md-1 col-xs-1"></div>
+      <div class="center-box col-md-10 col-sm-10">
+        <div class="panel panel-info upload-image-panel">
+          <div class="panel-heading">
+            <div class="panel-title"> Sell item </div>
+          </div>
+          <div class="panel-body">
+            <!-- <upload images> -->
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <span class="panel-title"> Upload item image(s) </span>
+              </div>
+              <div class="panel-body">
+                <form class="item-image-form form-horizontal" role="form">
+                  <div class="controls">
+                    <input type="file" id="itemimages" name="itemimages[]" class="file file-loading" multiple>
+                    <div id="errorBlock" class="help-block"></div>
+                  </div>        
+                </form>
+              </div>
+            </div>
+            <!-- </upload images> -->
+            <form class="form-horizontal" role="form">
+              <div class="panel panel-info item-name-detail-panel">
+                <div class="panel-heading">
+                  <div class="panel-title">Item name and description</div>
+                </div>
+                <div class="panel-body">
+                  <!-- item name -->
+                  <div class="form-group">
+                    <label for="itemName" class="col-md-2 control-label"> Item Name: </label>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="itemName" placeholder="Item Name">
+                    </div>
+                    <div class="col-md-4"></div>
+                  </div>
+                  <!-- item description -->
+                  <div class="form-group">
+                    <label for="description" class="col-md-2 control-label"> Description: </label>
+                    <div class="col-md-6">
+                      <textarea class="form-control" name="description" noresize placeholder="Write description of item"></textarea>
+                    </div>
+                    <div class="col-md-4"></div>
+                  </div>
+                </div>
+              </div> <!-- </item name and description panel> -->
+              <div class="panel panel-info category-panel">
+                <div class="panel-heading">
+                  <div class="panel-title">Item information</div>
+                </div>
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label for="itemCategory" class="col-md-2 control-label"> Category: </label>
+                    <div class="col-md-6">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="itemCategory" placeholder="Type to search Category">
+                        <div class="input-group-btn">
+                          <button type="button" id="searchCategory" data-target=".searched-category-dropdown" data-toggle="dropdown" aria-haspopup="true" value="" class="btn btn-success dropdown-toggle">
+                            <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                        </div>
+                        <div class="searched-category-dropdown">
+                          <!-- Items will be added dynamically -->
+                          <ul  class="dropdown-menu">
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- /category -->
+                  <div class="form-group">
+                    <label for="itemStatus" class="col-md-2 control-label">Item status:</label>
+                    <div class="col-md-6">
+                      <select name="itemStatus" id="itemStatus" class="form-control">
+                        <option value="new">New (unused)</option>
+                        <option value="almostunused">Close to unused</option>
+                        <option value="noscratch">No noticeable scracth or dirt</option>
+                        <option value="slightscratch">Slightly scratched and dirty</option>
+                        <option value="scratches">Scractches and dirty</option>
+                        <option value="bad">Overall conidtion is bad</option>
+                      </select>
+                    </div>
+                  </div> <!-- /item status -->
+                </div> <!-- /panel body -->
+              </div> <!-- category-panel -->
+              <div class="panel panel-info delivery-info-panel">
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    Delivery information
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label for="feeBurden" class="col-md-2 control-label">Burden of shipping amount:</label>
+                    <div class="col-md-6">
+                      <select name="feeBurden" id="feeBurden" class="form-control">
+                        <option value="paidbysender">Postage fee paid by you</option>
+                        <option value="cashondelivery">Cash on delivery (Purchaser burden)</option>
+                        <option value="personaldelivery">Personal delivery (no fee burden)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="sourceState" class="col-md-2 control-label"> Shipment source state: </label>
+                    <div class="col-md-6">
+                      <select name="sourceState" id="sourceState" class="form-control">
+                        <option value="Gujarat">Gujarat</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="shipDuration" class="col-md-2 control-label">Shipment duration: </label>
+                    <div class="col-md-6">
+                      <select name="shipDuration" id="shipDuration" class="form-control">
+                        <option value="2">1~2 Days</option>
+                        <option value="3">2~3 Days</option>
+                        <option value="7">4~7 Days</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> <!-- /panel-body -->
+              </div> <!-- /delivery-info-panel -->
+              <div class="panel panel-info pricing-info-panel">
+                <div class="panel-heading">
+                  <div class="panel-title">Pricing information</div>
+                </div>
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label for="sellingPrice" class="col-md-2 control-label"> Set selling price: </label>
+                    <div class="col-md-6">
+                      <input type="number" name="sellingPrice" id="sellingPrice" class="form-control" placeholder="500 ~ 1000">
+                      <div id="sellingPriceMask"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-2 control-label"> Sales commission: </label>
+                    <div class="col-md-6">
+                      <label id="salesCommission" class="form-control"> {{salesCommission}} </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-2 control-label"> Sales profit: </label>
+                    <div class="col-md-6">
+                      <label id="salesProfit" class="form-control"> {{salesProfit}} </label>
+                    </div>
+                  </div>
+                </div> <!-- /panel-body -->
+              </div>
+              <div class="col-md-12 controls">
+                <button class="btn btn-primary" id="addItem" type="button" value="">
+                  <i class="fi-burst-sale"></i>
+                  Sell this item!
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 col-xs-1"></div>
+    </div>
+  </div>
+</div>
+{{#loadModule "sellItem"}} {{/loadModule}}

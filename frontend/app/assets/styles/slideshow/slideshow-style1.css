@@ -1,0 +1,18 @@
+.slideshow-type1-main {
+  margin: 15px 0px 10px 0px;
+}
+.slideshow-type1-main .slider-left-wrapper,
+.slideshow-type1-main .slider-right-wrapper {
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.98);
+  transition: box-shadow 0.2s ease;
+  height: 50px;
+  padding-top: 17px;
+  padding-left: 9px;
+}
+.slideshow-type1-main .item {
+  width: 150px;
+}
+.slideshow-type1-main .item a {
+  text-decoration: none;
+}
